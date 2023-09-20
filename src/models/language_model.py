@@ -23,9 +23,8 @@ class LanguageModel(AbstractModel):
         language_dicts = []
         for language in languages:
             language_dict = {
-                'id': language.id,
-                'name': language.name,
-                'code': language.code,
+                "name": language.get("name"),
+                "acronym": language.get("acronym"),
             }
             language_dicts.append(language_dict)
 
