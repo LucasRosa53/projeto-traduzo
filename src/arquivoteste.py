@@ -1,1 +1,0 @@
-# testando e configurando no novo computador
