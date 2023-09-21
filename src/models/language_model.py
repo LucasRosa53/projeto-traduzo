@@ -12,6 +12,7 @@ class LanguageModel(AbstractModel):
     # Req. 2
     def to_dict(self):
         return {
+            "_id": self.data.get("_id"),
             "name": self.data.get("name"),
             "acronym": self.data.get("acronym")
         }
