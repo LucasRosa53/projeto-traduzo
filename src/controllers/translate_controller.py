@@ -15,12 +15,12 @@ def index():
     text_to_translate = "O que deseja traduzir"
     translate_from = "pt"
     translate_to = "en"
-    google_translator = "Tradução"
+    translated = "Tradução"
     if request.method == "POST":
         text_to_translate = request.form.get("text-to-translate")
         translate_from = request.form.get("translate-from")
         translate_to = request.form.get("translate-to")
-        google_translator = GoogleTranslator(
+        translated = GoogleTranslator(
             source=translate_from,
             target=translate_to
         ).translate(text_to_translate)
@@ -30,7 +30,7 @@ def index():
             text_to_translate=text_to_translate,
             translate_from=translate_from,
             translate_to=translate_to,
-            translated=google_translator
+            translated=translated
         )
 
 
@@ -41,7 +41,7 @@ def reverse():
     text_to_translate = request.form.get("text-to-translate")
     translate_from = request.form.get("translate-from")
     translate_to = request.form.get("translate_to")
-    google_translator = GoogleTranslator(
+    translated = GoogleTranslator(
         source=translate_from,
         target=translate_to
     ).translate(text_to_translate)
@@ -51,5 +51,5 @@ def reverse():
             text_to_translate=text_to_translate,
             translate_from=translate_to,
             translate_to=translate_from,
-            translated=google_translator
+            translated=translated
         )
