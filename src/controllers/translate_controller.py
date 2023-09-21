@@ -12,8 +12,8 @@ translate_controller = Blueprint("translate_controller", __name__)
 def index():
     languages_model = LanguageModel.list_dicts()
     text_to_translate = "O que deseja traduzir"
-    translate_from = "pt"
-    translate_to = "en"
+    translate_from = "en"
+    translate_to = "pt"
     translated = "Tradução"
     return render_template(
         "index.html",
