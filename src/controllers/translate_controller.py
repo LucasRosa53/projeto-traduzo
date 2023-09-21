@@ -53,4 +53,3 @@ def reverse():
             translate_to=translate_from,
             translated=google_translator
         )
-
