@@ -22,10 +22,7 @@ class LanguageModel(AbstractModel):
         languages = cls._collection.find()
         language_dicts = []
         for language in languages:
-            language_dict = {
-                "name": language["name"],
-                "acronym": language["acronym"]
-            }
-            language_dicts.append(language_dict)
+            todict = language.to_dict()
+            language_dicts.append(todict)
 
         return language_dicts
