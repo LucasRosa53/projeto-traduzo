@@ -41,6 +41,7 @@ def reverse():
     text_to_translate = request.form.get("text-to-translate")
     translate_from = request.form.get("translate-from")
     translate_to = request.form.get("translate_to")
+    translate_from, translate_to = translate_to, translate_from
     google_translator = GoogleTranslator(
         source=translate_from,
         target=translate_to
@@ -49,7 +50,7 @@ def reverse():
             "index.html",
             languages=languages,
             text_to_translate=text_to_translate,
-            translate_from=translate_to,
-            translate_to=translate_from,
+            translate_from=translate_from,
+            translate_to=translate_to,
             translated=google_translator
         )
