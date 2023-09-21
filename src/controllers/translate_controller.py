@@ -42,8 +42,8 @@ def reverse():
             "index.html",
             languages=languages,
             text_to_translate=text_to_translate,
-            translate_from=translate_from,
-            translate_to=translate_to,
+            translate_from=translate_to,
+            translate_to=translate_from,
             translated=google_translator
         )
 
